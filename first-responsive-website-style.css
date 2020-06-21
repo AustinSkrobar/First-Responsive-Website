@@ -13,14 +13,9 @@
 #bottom {display: flex;grid-area: bottom;justify-content: space-evenly;align-items: center;}
 
 @media (min-width: 320px) {
-    main {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4 1fr);
-        grid-template-areas: 
-        "top"
-        "block1"
-        "block2"
-        "block3";
+    main { display: flex; 
+        flex-direction: column;
+        
     }
     #top {
         grid-area: top;
@@ -30,17 +25,14 @@
         justify-content: center;
         font-size: 30px;
         background-color: #33A8DD;}
-        .data1{grid-area: block1;}
-        .data2{grid-area: block2;}
-        .data3{grid-area: block3;}
     #welcome {width: 299px; text-align: left;}        
     .txt {color: black;}   
     .title {color: black;}  
     #top, #bottom {width: 100%;}
-    #bottom {background-color: #F7F5F6;display: flex;grid-area: bottom;justify-content: space-evenly;align-items: center;}
+    #bottom {background-color: #F7F5F6;display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;}
     }
 @media (min-width: 992px) {
-    main {grid-template-columns: repeat(3,1fr);
+    main {grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
         "top top top"
@@ -49,6 +41,7 @@
     #top {
         grid-area: top;
         height: 300px;
+
         display: inline-flex;
         align-items: center;
         justify-content: center;
